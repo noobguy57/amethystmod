@@ -7,12 +7,12 @@ import net.minecraft.creativetab.CreativeTabs;
 
 public class Amethyst extends Block
 {
-    public Amethyst()
+    public Amethyst(String name, Material material)
     {
         super(Material.ROCK);
-        setUnlocalizedName("amethystOre");
+        setUnlocalizedName("amethystore");
         setCreativeTab(CreativeTabs.BUILDING_BLOCKS);
-        setRegistryName("amethystOre");
+        setRegistryName("amethystore");
         setHardness(4.0F);
         setHarvestLevel("pickaxe", 2); // 2 = iron or greater 1 = stone, 0 = wood/gold
         setSoundType(SoundType.STONE);

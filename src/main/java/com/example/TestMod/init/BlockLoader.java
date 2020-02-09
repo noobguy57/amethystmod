@@ -3,6 +3,7 @@ package com.example.TestMod.init;
 import com.example.TestMod.Reference;
 import com.example.TestMod.blocks.Amethyst;
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -19,12 +20,12 @@ public class BlockLoader {
     static Block Amethyst;
 
     public static void init() {
-        new Amethyst();
+        Amethyst = new Amethyst("amethystore", Material.ROCK);
     }
 
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
-        event.getRegistry().registerAll(Amethyst = new Amethyst());
+        event.getRegistry().registerAll(Amethyst);
     }
 
     @SubscribeEvent
