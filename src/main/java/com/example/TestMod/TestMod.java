@@ -1,6 +1,7 @@
 package com.example.TestMod;
 
 import com.example.TestMod.init.BlockLoader;
+import com.example.TestMod.init.ModItems;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -15,6 +16,7 @@ public class TestMod {
     {
         System.out.println(Reference.MOD_ID + ":preInit");
         BlockLoader.init();
+        ModItems.init();
     }
 
     @Mod.EventHandler
